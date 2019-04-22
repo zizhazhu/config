@@ -21,3 +21,4 @@ set autoindent
 set expandtab
 
 filetype plugin indent on
+setlocal spell spelllang=en
