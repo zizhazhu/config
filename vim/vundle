@@ -15,3 +15,16 @@ Plugin 'chrisbra/changesPlugin'
 Plugin 'tomtom/quickfixsigns_vim'
 let g:gitgutter_git_executable = 'C:\Program Files\Git\bin\git.exe'
 let g:airline#extensions#hunks#enabled = 1
+
+" shorten mode
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ }
