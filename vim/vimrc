@@ -22,3 +22,10 @@ set expandtab
 
 filetype plugin indent on
 setlocal spell spelllang=en
+
+if has("win32")
+    set encoding=utf-8
+    source $VIMRUNTIME/delmenu.vim
+    " source $VIMRUNTIME/menu.vim
+    set guifont=Source_Code_Pro_for_Powerline:h11:cANSI
+endif
