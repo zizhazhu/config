@@ -29,9 +29,3 @@ let g:airline_mode_map = {
     \ 's'  : 'S',
     \ }
 
-" modify
-function! AirlineInit()
-  let g:airline_section_a = airline#section#create(['mode'])
-endfunction
-autocmd Vimenter * call AirlineInit()
-
