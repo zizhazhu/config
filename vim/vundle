@@ -8,14 +8,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 let g:airline_powerline_fonts = 1
 
-" hunks
-Plugin 'airblade/vim-gitgutter'
-Plugin 'mhinz/vim-signify'
-Plugin 'chrisbra/changesPlugin'
-Plugin 'tomtom/quickfixsigns_vim'
-let g:gitgutter_git_executable = 'C:\Program Files\Git\bin\git.exe'
-let g:airline#extensions#hunks#enabled = 1
-
 " shorten mode
 let g:airline_mode_map = {
     \ '__' : '-',
