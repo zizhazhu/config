@@ -21,7 +21,6 @@ set autoindent
 set expandtab
 
 filetype plugin indent on
-setlocal spell spelllang=en
 
 if has("win32")
     set encoding=utf-8
