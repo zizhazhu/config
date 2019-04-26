@@ -1,6 +1,9 @@
+# rainblow brace
 Plugin 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
+# vim-airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+let g:airline_powerline_fonts = 1
