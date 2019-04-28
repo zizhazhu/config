@@ -31,3 +31,5 @@ endif
 
 " Set vundle as vim filetype
 au BufRead,BufNewFile vundle set filetype=vim
+
+au FileType json set ts=2 sts=2 sw=2 expandtab
