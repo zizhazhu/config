@@ -20,6 +20,12 @@ set incsearch
 set autoindent
 set expandtab
 
+" mouse
+set mouse=a
+
+" backspace can't use
+set backspace=indent,eol,start
+
 filetype plugin indent on
 
 if has("win32")
