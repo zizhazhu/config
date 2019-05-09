@@ -8,19 +8,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 let g:airline_powerline_fonts = 1
 
-" shorten mode
-let g:airline_mode_map = {
-    \ '__' : '-',
-    \ 'n'  : 'N',
-    \ 'i'  : 'I',
-    \ 'R'  : 'R',
-    \ 'c'  : 'C',
-    \ 'v'  : 'V',
-    \ 'V'  : 'V',
-    \ '' : 'V',
-    \ 's'  : 'S',
-    \ }
-
 " yaml
 Plugin 'stephpy/vim-yaml'
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
