@@ -15,3 +15,12 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " surround
 Plugin 'tpope/vim-surround'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
