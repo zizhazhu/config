@@ -1,16 +1,35 @@
-if [ -f "$HOME/.bashrc" ]; then
-    echo "" >> $HOME/.bashrc
-    echo "# myself shell config" >> $HOME/.bashrc
-    echo "source $(pwd)/shell/init.sh" >> $HOME/.bashrc
-fi
+#!/bin/bash
 
-if [ -f "$HOME/.vimrc" ]; then
-    echo "" >> $HOME/.vimrc
-    echo "source $(pwd)/vim/vimrc" >> $HOME/.vimrc
-fi
+fillConfig() {
+    # params: 1:file 2:source 3:comment
+    begin="$3 start"
+    end="$3 end"
 
-if [ -f "$HOME/.tmux.conf" ]; then
-    echo "" >> $HOME/.tmux.conf
-    echo "mytmux=$(pwd)" >> $HOME/.tmux.conf
-    echo "source $mytmux/.tmux.conf" >> $HOME/.tmux.conf
-fi
+    echo $1
+
+    if [ -f $1 ]; then
+      grep "$begin" $1 &> /dev/null
+      if [ $? != 0 ]; then
+          echo "" >> $1
+          echo "$begin" >> $1
+          echo "$2" >> $1
+          echo "$end" >> $1
+      else
+          echo "$1 already exists"
+      fi
+    else
+      echo "$1 not exist"
+    fi
+}
+
+bashrc="$HOME/.bashrc"
+vimrc="$HOME/.vimrc"
+tmuxconf="$HOME/.tmux.conf"
+
+dirnow=$(pwd)
+
+fillConfig $bashrc "source $dirnow/shell/init.sh" "# myself config"
+fillConfig "$HOME/.zshrc" "source $dirnow/shell/init.sh" "# myself config"
+fillConfig $vimrc "source $dirnow/vim/vimrc" "\" myself config"
+fillConfig $tmuxconf "source $dirnow/tmux/tmux.conf" "# myself config"
+
