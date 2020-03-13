@@ -12,7 +12,7 @@ fillConfig() {
         if [ $? != 0 ]; then
             echo "" >> $1
             echo "$begin" >> $1
-            echo "$2" >> $1
+            echo -e "$2" >> $1
             echo "$end" >> $1
         else
             echo "$1 already exists"
@@ -31,7 +31,10 @@ dirnow=$(pwd)
 fillConfig $bashrc "source $dirnow/shell/init.sh" "# myself config"
 fillConfig "$HOME/.zshrc" "source $dirnow/shell/init.sh" "# myself config"
 fillConfig $vimrc "source $dirnow/vim/vimrc" "\" myself config"
-fillConfig $tmuxconf "source $dirnow/tmux/tmux.conf" "# myself config"
+
+tmux_version=$(tmux -V | cut -f 2 -d" " | cut -f 1 -d".")
+tmux_config="$dirnow/tmux/tmux${tmux_version}.conf"
+fillConfig $tmuxconf "source ${tmux_config}\nsource $dirnow/tmux/common.conf" "# myself config"
 
 if [ -x "$(command -v curl)" ]; then
     if [ -f "$HOME/.vim/autoload/plug.vim" ]; then
