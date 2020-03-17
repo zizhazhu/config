@@ -20,8 +20,6 @@ else
 	return
 fi
 
-export CONFIG_PATH=$(dirname $0)/../
-
 # $- shows the current set of options in your current shell
 # H - histexpand
 # m - monitor
