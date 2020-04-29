@@ -32,7 +32,10 @@ case "$-" in
 esac
 
 # put local bin into PATH
-if [ -d "$HOME/.local/bin" ]; then
-	export PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/local" ]; then
+	export PATH="$HOME/local/bin:$PATH"
+	export C_INCLUDE_PATH="$HOME/local/include:$C_INCLUDE_PATH"
+	export CPP_INCLUDE_PATH="$HOME/local/include:$CPP_INCLUDE_PATH"
+	export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
 fi
 
