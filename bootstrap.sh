@@ -23,13 +23,14 @@ fillConfig() {
 }
 
 bashrc="$HOME/.bashrc"
+zshrc="$HOME/.zshrc"
 vimrc="$HOME/.vimrc"
 tmuxconf="$HOME/.tmux.conf"
 
 dirnow=$(pwd)
 
 fillConfig $bashrc "export CONFIG_PATH=$dirnow\nsource $dirnow/shell/init.sh" "# myself config"
-fillConfig "$HOME/.zshrc" "export CONFIG_PATH=$dirnow\nsource $dirnow/shell/init.sh" "# myself config"
+fillConfig $zshrc "export CONFIG_PATH=$dirnow\nsource $dirnow/shell/init.sh" "# myself config"
 fillConfig $vimrc "source $dirnow/vim/vimrc" "\" myself config"
 
 tmux_version=$(tmux -V | cut -f 2 -d" " | cut -f 1 -d".")
