@@ -1,3 +1,18 @@
+# prevent from loading this script twice
+if [ -z "$_INIT_SH_LOADED" ]; then
+	_INIT_SH_LOADED=1
+else
+	return
+fi
+
+# put local bin into PATH
+if [ -d "$HOME/local" ]; then
+	export PATH="$HOME/local/bin:$PATH"
+	export C_INCLUDE_PATH="$HOME/local/include:$C_INCLUDE_PATH"
+	export CPP_INCLUDE_PATH="$HOME/local/include:$CPP_INCLUDE_PATH"
+	export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
+fi
+
 # clear up repeated path in PATH
 if [ -n "$PATH" ]; then
 	old_PATH=$PATH:; PATH=
@@ -13,12 +28,7 @@ if [ -n "$PATH" ]; then
 	unset old_PATH x
 fi
 
-# prevent from loading this script twice
-if [ -z "$_INIT_SH_LOADED" ]; then
-	_INIT_SH_LOADED=1
-else
-	return
-fi
+alias task="asynctask -f"
 
 # $- shows the current set of options in your current shell
 # H - histexpand
@@ -30,12 +40,4 @@ case "$-" in
 	*i*) ;;
 	*) return
 esac
-
-# put local bin into PATH
-if [ -d "$HOME/local" ]; then
-	export PATH="$HOME/local/bin:$PATH"
-	export C_INCLUDE_PATH="$HOME/local/include:$C_INCLUDE_PATH"
-	export CPP_INCLUDE_PATH="$HOME/local/include:$CPP_INCLUDE_PATH"
-	export LD_LIBRARY_PATH="$HOME/local/lib:$LD_LIBRARY_PATH"
-fi
 
