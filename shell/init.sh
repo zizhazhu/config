@@ -1,3 +1,6 @@
+alias ls='ls --color=auto'
+alias ll='ls -al'
+
 # prevent from loading this script twice
 if [ -z "$_INIT_SH_LOADED" ]; then
 	_INIT_SH_LOADED=1
