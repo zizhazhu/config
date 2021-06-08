@@ -4,4 +4,4 @@ mkdir -p ~/.config/asynctask/
 # global config
 touch ~/.config/asynctask/asynctask.ini
 # global task
-touch ~/.config/asynctask/tasks.ini
+ln -s ~/local/config/tasks/tasks.ini ~/.config/asynctask/tasks.ini
