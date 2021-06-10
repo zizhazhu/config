@@ -36,6 +36,7 @@ if has("win32")
 endif
 
 au FileType json set ts=2 sts=2 sw=2 expandtab
+au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " plug.vim
 call plug#begin('~/.vim/plugged')
