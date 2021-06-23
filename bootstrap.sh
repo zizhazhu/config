@@ -48,3 +48,10 @@ if [ -x "$(command -v curl)" ]; then
 else
     echo "Please install curl."
 fi
+
+mkdir -p ~/.tmux/plugins
+if [ -d "$HOME/.tmux/plugins/tpm" ]; then
+    echo "tmux tpm already exists"
+else
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
