@@ -48,10 +48,6 @@ Plug 'skywind3000/asyncrun.vim'
 " auto open quickfix window with height 6 or you need open it by :copen
 let g:asyncrun_open = 6
 
-call plug#end()
-
-call plug#begin('~/.vim/plugged')
-
 " show indent as charactor |
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
