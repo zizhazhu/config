@@ -45,3 +45,11 @@ case "$-" in
 	*) return
 esac
 
+# kubectl alias
+kubectl_alias() {
+    alias ku='kubectl'
+    alias kug='kubectl get'
+    alias kud='kubectl describe'
+}
+echo "init.sh load success"
+
