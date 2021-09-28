@@ -10,6 +10,7 @@ fi
 
 # put local bin into PATH
 if [ -d "$HOME/local" ]; then
+    export MY_LOCAL="$HOME/local"
 	export PATH="$HOME/local/bin:$PATH"
 	export C_INCLUDE_PATH="$HOME/local/include:$C_INCLUDE_PATH"
 	export CPP_INCLUDE_PATH="$HOME/local/include:$CPP_INCLUDE_PATH"
