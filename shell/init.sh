@@ -1,5 +1,6 @@
 alias ls='ls --color=auto'
 alias ll='ls -al'
+alias dc='docker-compose'
 
 # prevent from loading this script twice
 if [ -z "$_INIT_SH_LOADED" ]; then
