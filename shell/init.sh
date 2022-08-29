@@ -34,6 +34,7 @@ if [ -n "$PATH" ]; then
 fi
 
 alias task="asynctask -f"
+bindkey -s '^T' 'task\n'
 
 # $- shows the current set of options in your current shell
 # H - histexpand
@@ -52,5 +53,4 @@ kubectl_alias() {
     alias kug='kubectl get'
     alias kud='kubectl describe'
 }
-echo "init.sh load success"
 
