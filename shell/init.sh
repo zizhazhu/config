@@ -1,3 +1,5 @@
+shell=$(ps |  grep $$  |  awk '{print $4}')
+
 alias ls='ls --color=auto'
 alias ll='ls -al'
 alias dc='docker-compose'
@@ -34,7 +36,9 @@ if [ -n "$PATH" ]; then
 fi
 
 alias task="asynctask -f"
-bindkey -s '^T' 'task\n'
+if [ $shell = "zsh" ]; then
+    bindkey -s '^T' 'task\n'
+fi
 
 # $- shows the current set of options in your current shell
 # H - histexpand
