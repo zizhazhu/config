@@ -53,7 +53,7 @@ esac
 
 # kubectl alias
 kubectl_alias() {
-    alias ku='kubectl'
+    alias k='kubectl'
     alias kug='kubectl get'
     alias kud='kubectl describe'
 }
