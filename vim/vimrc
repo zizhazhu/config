@@ -38,20 +38,3 @@ endif
 au FileType json set ts=2 sts=2 sw=2 expandtab
 au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-inoremap jj <ESC>
-
-" plug.vim
-call plug#begin('~/.vim/plugged')
-
-" asynctasks plugin
-" like vscode task system
-Plug 'skywind3000/asynctasks.vim'
-Plug 'skywind3000/asyncrun.vim'
-" auto open quickfix window with height 6 or you need open it by :copen
-let g:asyncrun_open = 6
-
-" show indent as charactor |
-Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '|'
-
-call plug#end()
