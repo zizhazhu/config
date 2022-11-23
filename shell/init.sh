@@ -57,13 +57,13 @@ kubectl_alias() {
     alias kud='kubectl describe'
 }
 
-type kubectl > /dev/null 2&>1
+type kubectl > /dev/null 2>&1
 exists=$?
 if [ $exists = 0 ]; then
     kubectl_alias
 fi
 
-type asynctask > /dev/null 2&>1
+type asynctask > /dev/null 2>&1
 exists=$?
 if [ $exists = 0 ]; then
     alias task="asynctask -f"
