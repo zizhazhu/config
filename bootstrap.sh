@@ -9,7 +9,8 @@ fillConfig() {
 
     if [ -f $1 ]; then
         grep "$begin" $1 &> /dev/null
-        if [ $? != 0 ]; then
+        ret=$?
+        if [ $ret = 1 ]; then
             echo "" >> $1
             echo "$begin" >> $1
             echo -e "$2" >> $1
