@@ -36,7 +36,7 @@ if [ -n "$PATH" ]; then
 fi
 
 if [ $shell = "zsh" ]; then
-    bindkey -s '^T' 'task\n'
+    bindkey -s '^T' 'task -i\n'
 fi
 
 # $- shows the current set of options in your current shell
